@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Environment
+metadata:
+  name: testeste_environment
+  environment:
+    domain: domain.com
+    hostedZoneId: zoneid
+    vpc_id: vpc_id
+    vpc_name: vpc_name
+    vpc_region: us-east-1
+    terraformStateBucketName: bucket_state
+    terraformStateBucketRegion: us-east-1     
+    certManagerEmail: 
+    certManagerIssuerType: staging    
+  annotations:
+    github.com/project-slug: veecode-homolog/testeste_environment
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: development
+  owner: "group:default/admin"
